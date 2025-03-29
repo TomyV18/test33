@@ -428,7 +428,6 @@ button, input{
         width: 100%;
         background-color: #1b212c;
         padding: 0 10%;
-        overflow-y: scroll;
         overflow-x: hidden;
     }
 

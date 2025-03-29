@@ -757,7 +757,6 @@ h2:nth-of-type(8), p:nth-of-type(8) {
         justify-content: center;
         align-items: center; /* Centra los elementos horizontalmente */
         text-align: center; /* Asegura que el texto también esté centrado */
-        overflow-y: scroll;
         overflow-x: hidden;
     }
 
@@ -783,12 +782,12 @@ h2:nth-of-type(8), p:nth-of-type(8) {
     }
 
     .bottom-leftt h1 {
-        font-size: 50px;
+        font-size: 47px;
         line-height: 60px;
     }
 
     .bottom-leftt h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .bottom-leftt p {
@@ -850,7 +849,7 @@ h2:nth-of-type(8), p:nth-of-type(8) {
     .bg-effectt4{
         width: 120%;
         position: absolute;
-        top: 850px;
+        top: 750px;
         scale: 1.7;
     }
     .cuadernoelasticoo{
