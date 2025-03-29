@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <title>Solo Cuadernos</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <a href="contacto.css"><h1 data-aos="zoom-in" data-aos-duration="1000" >Solo Cuadernos</h1></a>
+            <!--<a href="#" class="logo" data-aos="zoom-in" data-aos-duration="1000" >
+                <h1>Solo Cuadernos</h1>
+                <img src="images/logo.png" alt="">
+            </a>-->
+            <ul id="sidemenu">
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Inicio</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="quienessomos.html">Quienes Somos</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="Productos.html">Productos</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="">Pages</a></li>
+                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="Contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <div class="nav-btn" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
+                <button class="login-btn">Whatsapp</button>
+                <button id="toggleBtn" class="toggle-btn">
+                    <img src="images/bar-icon.png" alt="">
+                </button>
+            </div>
+        </div>
+        <br><br>
+            <div class="bottom-content">
+                <div class="bottom-middle">
+                        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900" class="form-container">
+                        <h2>Enviar Mensaje</h2>
+                        <form id="emailForm">
+                            <input type="text" id="nombre" placeholder="Nombre" required>
+                            <input type="text" id="apellido" placeholder="Apellido" required>
+                            <input type="email" id="correo" placeholder="Correo electrónico" required>
+                            <input type="tel" id="numero" placeholder="Número de teléfono" required>
+                            <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                            <button class="button2" type="button" onclick="enviarEmail()">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script>
+        const toggleBtn = document.getElementById("toggleBtn")
+        const sideMenu = document.getElementById("sidemenu")
+
+        toggleBtn.addEventListener("click", () => {
+            sideMenu.classList.toggle("active")
+        })
+    </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({offset:0});
+      </script>
+          <script>
+            function enviarEmail() {
+                let nombre = document.getElementById("nombre").value.trim();
+                let apellido = document.getElementById("apellido").value.trim();
+                let correo = document.getElementById("correo").value.trim();
+                let numero = document.getElementById("numero").value.trim();
+                let mensaje = document.getElementById("mensaje").value.trim();
+    
+                if (!nombre || !apellido || !correo || !numero || !mensaje) {
+                    alert("Por favor, completa todos los campos.");
+                    return;
+                }
+    
+                let asunto = "Mensaje de " + nombre + " " + apellido;
+                let cuerpo = `Nombre: ${nombre} ${apellido}%0D%0AEmail: ${correo}%0D%0ATeléfono: ${numero}%0D%0A%0D%0AMensaje:%0D%0A${mensaje}`;
+    
+                let mailtoLink = `mailto:tucorreo@example.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    
+                window.location.href = mailtoLink;
+    
+                document.getElementById("emailForm").reset(); // Reiniciar formulario
+            }
+        </script>
+</body>
+</html>
