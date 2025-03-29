@@ -337,13 +337,24 @@ textarea {
         z-index: 1000;
     }
 
-    .login-btn{
-        z-index: 1000;
-        margin-top: -20px;
-        top: 10px;
+    .login-btn
+    {
+        font-size: 12px;
+        background-color: #0c9213;
+        color: white;
+        width: auto;
+        height: 40px;
+        padding: 0px 0px;
+        width: 90px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 2px solid #ffffff;
+        transition: 0.3s linear;
+
     }
 
-    .login-btn, .btn-sec button{
+    .btn-sec button{
         padding: 10px 20px;
         font-size: 12px;
     }
@@ -626,7 +637,8 @@ h2:nth-of-type(8), p:nth-of-type(8) {
         align-items: flex-start;
     }
     .navbar a{
-        font-size: 0.8rem;
+        font-size: 0.52rem;
+        margin-right: 10px;
     }
     .form-container {
         background: rgba(255, 255, 255, 0.1);
