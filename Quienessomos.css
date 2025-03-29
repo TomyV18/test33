@@ -601,7 +601,7 @@ h2:nth-of-type(8), p:nth-of-type(8) {
         max-width: 100vw;
     }
     .bottom-middle h1 {
-        font-size: 1.5rem !important;
+        font-size: 1.4em !important;
         color: #ffd6ae;
         text-align: center;
         font-weight: bold;
@@ -684,12 +684,13 @@ h2:nth-of-type(8), p:nth-of-type(8) {
         align-items: center;
     }
     .bottom-middle {
-        width: 90%;
+        width: 100%;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 10px;
         height: fit-content;
         display: flex;
         justify-content: center; /* Centra el contenido horizontalmente */
         flex-direction: column; /* Apila los elementos en columna */
+        border: 1px solid red;
     }
 }
